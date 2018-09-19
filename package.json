@@ -1,0 +1,24 @@
+{
+  "name": "emoji-encode",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bulma": "^0.7.1",
+    "emoji-mart": "^2.8.1",
+    "node-sass-chokidar": "^1.3.3",
+    "query-string": "^6.1.0",
+    "react": "^16.4.2",
+    "react-debounce-input": "^3.2.0",
+    "react-dom": "^16.4.2",
+    "react-scripts": "1.1.5",
+    "styled-components": "^3.4.5"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

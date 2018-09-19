@@ -1,0 +1,96 @@
+
+@keyframes rotating {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.logo.loading, .logo:hover {
+  display:inline-block;
+  animation: rotating 2s linear infinite;
+}
+.logo {
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+
+.loading-hero {
+  position: fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  background: rgba(0,0,0,0.6);
+  z-index:999999;
+}
+.loading-hero .container {
+  position:absolute;
+  top: 50%;
+  left:0;
+  right:0;
+  transform: translateY(-50%);
+}
+.loading-hero .button {
+  border:none;
+  box-shadow:none;
+  background:transparent;
+  font-size:6rem;
+}
+
+
+.textarea {
+  border: none;
+  background-color:#eee;
+}
+.textarea:focus {
+  background-color:#dfdfdf;
+}
+#encode, #decode {
+  position:relative;
+}
+#encode::after, #decode::after {
+  content: "beef";
+  position: absolute;
+  display:block;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:10;
+  border:10px solid pink;
+  pointer-events:none;
+}
+
+.emoji-input {
+  width:150px;
+  opacity:0.85;
+}
+.emoji-input:focus, .emoji-input:hover {
+  opacity:1;
+}
+
+.emoji-toast {
+  display:block;
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:9999;
+  transform: translate(0,100px);
+  transition: transform 0.2s ease-in;
+}
+.emoji-toast.active {
+  transform: translate(0, 0);
+}
+
+#content {
+  padding-top:0;
+}
+
+#steps {
+  list-style-type: decimal;
+  /* padding-left:1.3rem; */
+  list-style-position: inside;
+  font-size: 1.3rem;
+  columns: 2;
+}
